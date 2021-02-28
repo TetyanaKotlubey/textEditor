@@ -1,0 +1,78 @@
+a, button
+{
+    transition: all .3s ease-in-out;
+}
+.editor
+{
+    max-width: 500px;
+    margin: 50px auto;
+}
+.editor__wrap
+{
+    position: relative;
+    min-height: 200px;
+}
+.editor__preview, .editor__tool
+{
+    display: block;
+    width: 100%; 
+    resize: none;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    height: 100%;
+    padding: 15px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.editor__hint{
+    position: relative;
+    color: #ccc;
+    padding: 15px 0;
+}
+.editor__hint
+{
+    position: relative;
+    color: #aaa;
+    padding: 15px 0;
+}
+.editor--active .editor__tool, .editor--active .editor__hint--tool
+{
+    opacity: 1;
+    z-index: 1;
+}
+.editor__tool, .editor__hint--tool,
+.editor--active .editor__preview, .editor--active .editor__hint--preview 
+{
+    opacity: 0;
+    z-index: -1;
+}
+.editor__tool,
+.editor__preview,
+.editor__hint
+{
+    transition: all .4s ease-in-out;
+}
+.editor__tool
+{
+    color: purple;
+}
+#resizer
+{
+    border: 1px solid red;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+#resizerBtn
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    cursor: move;
+    transform: translate(50%, 50%);
+    opacity: 0;
+}
